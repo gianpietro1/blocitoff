@@ -11,4 +11,12 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) << :name
   end
   
+  def after_sign_in_path_for(resource)
+    if current_user.list
+      @list
+    else
+      new_list_path
+    end
+  end
+
 end
