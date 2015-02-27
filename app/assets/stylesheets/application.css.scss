@@ -9,5 +9,19 @@
 }
 
 .container .jumbotron {
-  margin-top: 25px;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  margin-top: 40px;
+  background-color: #FF6600;
+  color: #fff;
+}
+
+.container .todolist {
+  background-color: #e0e0e0;
+  color: #000;   
+}
+
+.container .todolist .col-md-8 {
+  text-align: left;
 }
