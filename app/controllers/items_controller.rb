@@ -1,6 +1,8 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!
 
+  respond_to :html, :js
+
   def new
     @item = Item.new
   end
@@ -16,6 +18,21 @@ class ItemsController < ApplicationController
        flash[:error] = "There was an error saving the item. Please try again."
        redirect_to @list
      end
+  end
+
+  def destroy
+    @item = Item.find(params[:id])
+    @list = @item.list
+      
+      if @item.destroy
+        flash[:notice] = "\"#{@item.name}\" item was completed/deleted."
+      else
+        flash[:error] = "There was an error completing/deleting the item."
+      end
+
+    respond_with(@item) do |format|
+      format.html { redirect_to @list }
+    end 
   end
 
 end

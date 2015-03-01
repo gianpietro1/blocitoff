@@ -1,5 +1,4 @@
-<div class='media'>
-      <div class="media-body">
-          <p><%= item.name %></p>
-      </div>
-</div>
+<%= content_tag :tr, class: 'media', id: "item-#{item.id}" do %>
+            <td><%= item.name %></td>
+            <td><%= link_to "", item, method: :delete, class: 'glyphicon glyphicon-ok', remote: true %></td>
+<% end %>

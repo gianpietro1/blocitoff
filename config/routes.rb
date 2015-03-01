@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     resources :items, only: [:create]
   end
 
+  resources :items, only: [:show, :destroy]
+
   get 'about' => 'welcome#about'
 
   # The priority is based upon order of creation: first created -> highest priority.
