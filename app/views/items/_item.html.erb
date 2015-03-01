@@ -1,4 +1,5 @@
 <%= content_tag :tr, class: 'media', id: "item-#{item.id}" do %>
             <td><%= item.name %></td>
-            <td><%= link_to "", item, method: :delete, class: 'glyphicon glyphicon-ok', remote: true %></td>
+            <td class="center"><%= (((item.created_at + 7.days) - Time.now)/86400).round %></td>
+            <td class="center"><%= link_to "", item, method: :delete, class: 'glyphicon glyphicon-ok', remote: true %></td>
 <% end %>

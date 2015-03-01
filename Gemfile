@@ -28,6 +28,7 @@ gem 'bootstrap-sass', '~> 3.1.1'
 gem 'devise'
 gem 'figaro', '1.0'
 gem 'faker'
+gem 'whenever'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
