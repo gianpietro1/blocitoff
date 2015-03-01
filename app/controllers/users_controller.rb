@@ -13,7 +13,13 @@ class UsersController < ApplicationController
  
    private
  
+  def show
+    @user = current_user
+    @items = current_user.items
+  end
+
    def user_params
      params.require(:user).permit(:name)
     end
-   end
+
+end

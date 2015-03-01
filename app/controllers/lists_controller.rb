@@ -3,6 +3,8 @@ class ListsController < ApplicationController
 
   def show
     @list = current_user.list
+    @item = Item.new
+    @items = current_user.items
   end
 
   def new
@@ -41,7 +43,7 @@ class ListsController < ApplicationController
       
       if @list.destroy
         flash[:notice] = "\"#{@title}\" list was deleted successfully."
-        render :new
+        redirect_to new_list_path
       else
         flash[:error] = "There was an error deleting the list."
         render :show

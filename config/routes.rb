@@ -3,9 +3,11 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'welcome#index'
 
-  resources :users, only: [:update]
+  resources :users, only: [:update, :show]
   
-  resources :lists, except: [:index]
+  resources :lists, except: [:index] do
+    resources :items, only: [:create]
+  end
 
   get 'about' => 'welcome#about'
 
