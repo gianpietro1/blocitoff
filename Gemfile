@@ -27,6 +27,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'devise'
 gem 'figaro', '1.0'
+gem 'faker'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
