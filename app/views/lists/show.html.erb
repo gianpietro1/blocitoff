@@ -10,10 +10,10 @@
      <h2 class="center"><%= @list.title %></h2>
         <table style="width: 100%" class="table table-striped">
           <tr>
-            <th class="center">Created</th>
-            <th class="center">Description</th>
-            <th class="center">Days left</th>
-            <th class="center">Complete</th>
+            <th class="vertical-center center">Created</th>
+            <th class="vertical-center center">Description</th>
+            <th class="vertical-center center">Days left</th>
+            <th class="vertical-center center">Complete</th>
           </tr>
             <%= render @items %>
             <%= render partial: "items/form", locals: { list: @list, item: @item } %>
