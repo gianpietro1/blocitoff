@@ -29,6 +29,8 @@ gem 'devise'
 gem 'figaro', '1.0'
 gem 'faker'
 gem 'whenever'
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
