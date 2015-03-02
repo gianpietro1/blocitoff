@@ -12,7 +12,7 @@
 
   <div class="pull-right user-info">
    <% if current_user %>
-        Hello <%= link_to (current_user.name || current_user.email), root_path %>!
+        Hello <%= link_to ((current_user.name == "" || current_user.name == nil) ? current_user.email : current_user.name), root_path %>!
         <%= link_to edit_user_registration_path, class: 'btn btn-primary btn-sm' do %>
           <span class="glyphicon glyphicon-user"></span>
         <% end %>
