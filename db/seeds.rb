@@ -16,19 +16,19 @@ users = User.all
 lists = List.all
 
 # Keep a known user for testing purposes
-user = User.first
-user.skip_reconfirmation!
-user.update_attributes!(
-email: 'gianpietro1@gmail.com',
-password: '16111980'
-) 
+#user = User.first
+#user.skip_reconfirmation!
+#user.update_attributes!(
+#email: 'gianpietro1@gmail.com',
+#password: '16111980'
+#) 
 
 # Create Items
+user = users.sample
 50.times do
 Item.create!(
 name: Faker::Lorem.sentence, user: users.sample, list: user.list)
 end
-
 
 
 puts "Seed finished"

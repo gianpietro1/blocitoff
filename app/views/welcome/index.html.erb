@@ -6,6 +6,9 @@
           <% if !current_user %>
             <%= link_to "Sign In", new_user_session_path, class: 'btn btn-primary' %> or 
             <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %> today!
+            <p>
+              <small>You can also</small>
+            <%= link_to "Sign In with Facebook", 'users/auth/facebook', class: 'btn-facebook btn' %></p>
           <% else %>
             <%= link_to "Go to my list", current_user.list, class: 'btn btn-primary' %>
           <% end %>
